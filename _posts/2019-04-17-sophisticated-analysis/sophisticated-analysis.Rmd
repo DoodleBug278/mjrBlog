@@ -1,0 +1,61 @@
+---
+title: "Sophisticated Analysis"
+description: |
+  Analysis of sophisticated things.
+author:
+  - name: Nora Jones
+    url: https://doodlebug278.github.io/mjrBlog/
+date: 04-17-2019
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Placerat duis ultricies lacus sed turpis tincidunt. Vitae auctor eu augue ut lectus. Diam vulputate ut pharetra sit amet aliquam id diam maecenas. Proin sagittis nisl rhoncus mattis rhoncus urna. Facilisi morbi tempus iaculis urna id volutpat lacus. Sed tempus urna et pharetra pharetra massa massa. Integer quis auctor elit sed vulputate mi. Placerat in egestas erat imperdiet sed euismod. Eget sit amet tellus cras adipiscing enim. Sodales ut eu sem integer vitae.
+
+Faucibus et molestie ac feugiat sed lectus. Integer eget aliquet nibh praesent tristique magna sit amet purus. Lacus laoreet non curabitur gravida arcu ac tortor dignissim. Orci a scelerisque purus semper. Viverra accumsan in nisl nisi scelerisque eu. Lectus urna duis convallis convallis tellus. Mi in nulla posuere sollicitudin. Pulvinar neque laoreet suspendisse interdum consectetur libero. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Eget dolor morbi non arcu risus quis. Et molestie ac feugiat sed lectus vestibulum.
+
+Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Morbi tempus iaculis urna id volutpat lacus. Pretium aenean pharetra magna ac placerat. Fermentum et sollicitudin ac orci phasellus. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Porttitor lacus luctus accumsan tortor posuere ac ut. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Purus sit amet volutpat consequat. Eu non diam phasellus vestibulum lorem. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. At varius vel pharetra vel turpis nunc.
+
+Eget nunc scelerisque viverra mauris in aliquam sem. Pellentesque diam volutpat commodo sed egestas. In est ante in nibh. Porttitor rhoncus dolor purus non. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Sit amet mattis vulputate enim. Turpis tincidunt id aliquet risus. Turpis massa tincidunt dui ut ornare lectus. Ut lectus arcu bibendum at. Elit pellentesque habitant morbi tristique senectus et netus.
+
+Et malesuada fames ac turpis egestas sed. Quisque non tellus orci ac auctor. Vel risus commodo viverra maecenas accumsan. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Aliquam ultrices sagittis orci a scelerisque purus. Facilisi nullam vehicula ipsum a arcu cursus vitae. Enim tortor at auctor urna. Auctor elit sed vulputate mi sit. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Condimentum vitae sapien pellentesque habitant morbi. Massa placerat duis ultricies lacus sed. Neque viverra justo nec ultrices dui sapien eget mi proin. Tortor consequat id porta nibh venenatis.
+
+## Analysis
+
+It's dangerous to go alone. Here, take a plot:
+
+```{r preview = TRUE}
+ggplot(iris, aes(x = Sepal.Width, y = Petal.Length)) +
+  geom_point(aes(color = Species))
+```
+
+Looks lonely. Here's a table:
+
+```{r}
+iris %>% 
+  group_by(Species) %>% 
+  summarise(meanPetalLength = mean(Petal.Length)) %>% 
+  rmarkdown::paged_table()
+```
+
+
+## Conclusion
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Placerat duis ultricies lacus sed turpis tincidunt. Vitae auctor eu augue ut lectus. Diam vulputate ut pharetra sit amet aliquam id diam maecenas. Proin sagittis nisl rhoncus mattis rhoncus urna. Facilisi morbi tempus iaculis urna id volutpat lacus. Sed tempus urna et pharetra pharetra massa massa. Integer quis auctor elit sed vulputate mi. Placerat in egestas erat imperdiet sed euismod. Eget sit amet tellus cras adipiscing enim. Sodales ut eu sem integer vitae.
+
+Faucibus et molestie ac feugiat sed lectus. Integer eget aliquet nibh praesent tristique magna sit amet purus. Lacus laoreet non curabitur gravida arcu ac tortor dignissim. Orci a scelerisque purus semper. Viverra accumsan in nisl nisi scelerisque eu. Lectus urna duis convallis convallis tellus. Mi in nulla posuere sollicitudin. Pulvinar neque laoreet suspendisse interdum consectetur libero. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Eget dolor morbi non arcu risus quis. Et molestie ac feugiat sed lectus vestibulum.
+
+Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Morbi tempus iaculis urna id volutpat lacus. Pretium aenean pharetra magna ac placerat. Fermentum et sollicitudin ac orci phasellus. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Porttitor lacus luctus accumsan tortor posuere ac ut. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Purus sit amet volutpat consequat. Eu non diam phasellus vestibulum lorem. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. At varius vel pharetra vel turpis nunc.
+
+Eget nunc scelerisque viverra mauris in aliquam sem. Pellentesque diam volutpat commodo sed egestas. In est ante in nibh. Porttitor rhoncus dolor purus non. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Sit amet mattis vulputate enim. Turpis tincidunt id aliquet risus. Turpis massa tincidunt dui ut ornare lectus. Ut lectus arcu bibendum at. Elit pellentesque habitant morbi tristique senectus et netus.
+
+Et malesuada fames ac turpis egestas sed. Quisque non tellus orci ac auctor. Vel risus commodo viverra maecenas accumsan. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Aliquam ultrices sagittis orci a scelerisque purus. Facilisi nullam vehicula ipsum a arcu cursus vitae. Enim tortor at auctor urna. Auctor elit sed vulputate mi sit. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Condimentum vitae sapien pellentesque habitant morbi. Massa placerat duis ultricies lacus sed. Neque viverra justo nec ultrices dui sapien eget mi proin. Tortor consequat id porta nibh venenatis.
